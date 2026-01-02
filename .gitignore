@@ -25,3 +25,13 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Tests, Scripts and Docs
+test/
+*/test/
+tests/
+*/tests/
+docs/
+*/docs/
+scripts/
+*/scripts/
