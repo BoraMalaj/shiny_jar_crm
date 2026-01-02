@@ -1,0 +1,6 @@
+setup.py
+shinyjar_backend.egg-info/PKG-INFO
+shinyjar_backend.egg-info/SOURCES.txt
+shinyjar_backend.egg-info/dependency_links.txt
+shinyjar_backend.egg-info/requires.txt
+shinyjar_backend.egg-info/top_level.txt

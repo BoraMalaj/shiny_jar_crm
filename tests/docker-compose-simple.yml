@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: shinyjar
+      POSTGRES_PASSWORD: shinyjar123
+      POSTGRES_DB: shinyjar_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    image: python:3.12
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    command: >
+      sh -c "pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    depends_on:
+      - postgres
+
+  frontend:
+    image: python:3.12
+    working_dir: /app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app
+    command: >
+      sh -c "pip install streamlit pandas &&
+             streamlit run app.py --server.port=8501 --server.address=0.0.0.0"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
