@@ -4,24 +4,30 @@ __pycache__/
 *$py.class
 *.so
 .Python
+.env
+.venv
 venv/
-env/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit
+.streamlit/
 
 # Database
 *.db
 *.sqlite3
 
-# Environment
-.env
-.env.local
+# OS
+.DS_Store
+Thumbs.db
 
 # IDE
 .vscode/
 .idea/
-
-# OS
-.DS_Store
-Thumbs.db
+*.swp
+*.swo
+*~
 
 # Logs
 *.log
@@ -39,4 +45,7 @@ scripts/
 # Files to be excluded
 .env.example
 *.sh
-*.txt
+*.txt*.tmp
+*.pyc
+*.cache
+*.swp
