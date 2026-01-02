@@ -81,32 +81,32 @@ class AuthManager:
         """Demo authentication"""
         demo_users = {
             "bora_malaj": {
-                "password": "admin123", 
+                "password": "demo_password_123", 
                 "role": "admin",
                 "user_id": 1,
-                "email": "bora@shinyjar.com",
+                "email": "admin@example.com",
                 "full_name": "Bora Malaj",
                 "business_id": 1
             },
             "gerta_tirana": {
-                "password": "admin123",
+                "password": "demo_password_123",
                 "role": "supplier", 
                 "supplier_id": 1,
-                "email": "gerta@silverworld.com",
+                "email": "supplier@example.com",
                 "full_name": "Gerta Tirana",
                 "company": "Silver World Inc."
             },
             "arsjana_shehaj": {
-                "password": "admin123",
+                "password": "demo_password_123",
                 "role": "customer",
                 "customer_id": 101,  # Assuming she's customer ID 101
-                "email": "arsjana@email.com",
+                "email": "customer@example.com",
                 "full_name": "Arsjana Shehaj",
                 "total_spent": 1850.75
             },
             # Keep original demo users as backup
             "admin": {
-                "password": "admin123", 
+                "password": "demo_password_123", 
                 "role": "admin",
                 "user_id": 1,
                 "email": "admin@shinyjar.com",
@@ -634,7 +634,7 @@ def show_login_page():
                     </div>
                     <div class="demo-field">
                         <div class="demo-label">Password</div>
-                        <div class="demo-value">admin123</div>
+                        <div class="demo-value">demo_password_123</div>
                     </div>
                 </div>
             </div>
@@ -651,7 +651,7 @@ def show_login_page():
                     </div>
                     <div class="demo-field">
                         <div class="demo-label">Password</div>
-                        <div class="demo-value">admin123</div>
+                        <div class="demo-value">demo_password_123</div>
                     </div>
                 </div>
             </div>
@@ -668,7 +668,7 @@ def show_login_page():
                     </div>
                     <div class="demo-field">
                         <div class="demo-label">Password</div>
-                        <div class="demo-value">admin123</div>
+                        <div class="demo-value">demo_password_123</div>
                     </div>
                 </div>
             </div>

@@ -69,7 +69,7 @@ A complete CRM system built for a jewelry business, featuring inventory manageme
 
 ## 📦 Installation & Setup
 
-### Option 1: Local Development
+### Local Development
 
 ```bash
 # 1. Clone the repository
@@ -116,19 +116,19 @@ Admin Mode:
 
 Username: admin or bora_malaj
 
-Password: admin123
+Password: demo_password_123
 
 Customer Portal:
 
-Username: arsjana_shehaj
+Username: arsjana_tirana
 
-Password: admin123
+Password: demo_password_123
 
 Supplier Portal:
 
 Username: gerta_tirana
 
-Password: admin123
+Password: demo_password_123
 
 📊 Database Schema
 https://docs/database_schema.png
@@ -203,4 +203,5 @@ PostgreSQL - Robust database system
 📞 Contact
 Bora Malaj - GitHub - bora@shinyjar.com
 
-Project Link: https://github.com/BoraMalaj/shiny-jar-crm
+Project Link: https://github.com/BoraMalaj/shiny_jar_crm
+
