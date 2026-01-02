@@ -1,21 +1,21 @@
-from pydantic_settings import BaseSettings
-from typing import Optional
+import os
+from dotenv import load_dotenv
 
-class Settings(BaseSettings):
+load_dotenv()
+
+class Settings:
     # Database
-    DATABASE_URL: str = "postgresql://postgres:postgres@localhost/shinyjar"
+    DB_HOST = os.getenv("DB_HOST", "localhost")
+    DB_PORT = os.getenv("DB_PORT", "5433")
+    DB_NAME = os.getenv("DB_NAME", "shinyjar_db")
+    DB_USER = os.getenv("DB_USER", "shinyjar")
+    DB_PASSWORD = os.getenv("DB_PASSWORD", "shinyjar123")
     
-    # Security
-    SECRET_KEY: str = "your-secret-key-change-in-production"
-    ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
+    DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     
     # App
-    APP_NAME: str = "Shiny Jar Business Suite"
-    VERSION: str = "1.0.0"
-    DEBUG: bool = True
-    
-    class Config:
-        env_file = ".env"
+    APP_NAME = os.getenv("APP_NAME", "Shiny Jar Business Suite")
+    SECRET_KEY = os.getenv("SECRET_KEY", "Boku2003")
+    DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
 settings = Settings()

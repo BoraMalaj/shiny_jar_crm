@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: shinyjar_db_prod
+    environment:
+      POSTGRES_DB: shinyjar_prod
+      POSTGRES_USER: shinyjar_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: shinyjar_backend_prod
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://shinyjar_user:${DB_PASSWORD}@postgres:5432/shinyjar_prod
+      SECRET_KEY: ${SECRET_KEY}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: shinyjar_frontend_prod
+    depends_on:
+      - backend
+    environment:
+      API_URL: http://backend:8000
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

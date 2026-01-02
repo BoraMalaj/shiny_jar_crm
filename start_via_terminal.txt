@@ -1,0 +1,13 @@
+((venv) ) beni@T14-BC:~/shiny_jar_suite$ pkill -f uvicorn 2>/dev/null
+# Terminal 1: Backend
+cd shiny_jar_suite/backend
+uvicorn app.main:app --reload
+
+((venv) ) beni@T14-BC:~/shiny_jar_suite$ pkill -f streamlit 2>/dev/null
+# Terminal 2: Frontend  
+cd shiny_jar_suite/frontend
+streamlit run app.py
+
+Start all: ./start_all.sh
+Stop all: ./stop_all.sh
+Access DB Cli: ./db_cli.sh

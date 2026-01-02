@@ -1,0 +1,39 @@
+# frontend/pages/__init__.py
+# This file makes the pages folder a proper Python package
+
+from .customer_dashboard import (
+    show_customer_dashboard,
+    show_customer_orders,
+    show_customer_invoices,
+    show_customer_profile
+)
+
+from .supplier_dashboard import (
+    show_supplier_dashboard,
+    show_supplier_orders,
+    show_supplier_products,
+    show_supplier_payments,
+    show_supplier_profile
+)
+
+from .inventory import show_inventory_page, generate_inventory_report
+
+# Export all page functions
+__all__ = [
+    # Customer dashboard
+    'show_customer_dashboard',
+    'show_customer_orders',
+    'show_customer_invoices',
+    'show_customer_profile',
+    
+    # Supplier dashboard
+    'show_supplier_dashboard',
+    'show_supplier_orders',
+    'show_supplier_products',
+    'show_supplier_payments',
+    'show_supplier_profile',
+    
+    # Inventory
+    'show_inventory_page',
+    'generate_inventory_report'
+]

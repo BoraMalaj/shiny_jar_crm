@@ -1,0 +1,1000 @@
+  939  source /home/beni/LauraWing/.venv/bin/activate
+  940  psql -U postgres
+  941  cd ./backend/
+  942  uvicorn app:app --reload
+  943  source /home/beni/LauraWing/.venv/bin/activate
+  944  npm run dev
+  945  npm install
+  946  cd ..
+  947  cd ./frontend/
+  948  clear
+  949  npm run dev
+  950  npm install
+  951  npm run dev
+  952  rm -rf node_modules package-lock.json
+  953  npm install
+  954  npm run dev
+  955  npx create-vite@latest . --template react-ts
+  956  history | grep tailwindcss
+  957  ls
+  958  ls -ahl
+  959  source ./.venv/bin/activate.csh
+  960  source ./.venv/bin/activate
+  961  clear
+  962  cd ./backend/
+  963  ./start_redis.sh
+  964  history | grep start_redis
+  965  chmod +x ./start_redis.sh
+  966  ./start_redis.sh
+  967  docker-compose up -d
+  968  uvicorn app:app --reload 
+  969  cd ..
+  970  cd ./presentation/
+  971  python ./create_presentation_pdf.py
+  972  pip install fpdf
+  973  python ./create_presentation_pdf.py
+  974  source /home/beni/LauraWing/.venv/bin/activate
+  975  clear
+  976  pip install faker
+  977  python ./backend/seed_data.py
+  978  clear
+  979  python ./backend/seed_data.py
+  980  clear
+  981  python ./backend/seed_data.py
+  982  clear
+  983  python ./backend/seed_data.py
+  984  python ./backend/seed_faqs.py
+  985  python ./backend/seed_faqs_extended.py
+  986  pip install httpx
+  987  celar
+  988  clear
+  989  pip install duffel-api
+  990  pip install scikit-learn spacy
+  991  python -m spacy download en_core_web_sm
+  992  cd ./backend/
+  993  uvicorn main:app --reload
+  994  pip install asyncpg
+  995  uvicorn main:app --reload
+  996  clear
+  997  uvicorn main:app --reload
+  998  pip install jose
+  999  uvicorn main:app --reload
+ 1000  pip install --upgrade python-jose
+ 1001  uvicorn main:app --reload
+ 1002  pip install passlib
+ 1003  uvicorn main:app --reload
+ 1004  cd .
+ 1005  cd ..
+ 1006  pip install sentry-sdk[fastapi]
+ 1007  history | greap react-router
+ 1008  history | grep react-router
+ 1009  cd ./frontend/
+ 1010  npm list react-router-dom
+ 1011  npm list
+ 1012  cd ..
+ 1013  pip install pyjwt passlib[bcrypt] python-multipart
+ 1014  pip install sentry-sdk[fastapi]
+ 1015  pip install pytest-playwright
+ 1016  playwright install
+ 1017  pip install fastapi uvicorn sqlalchemy psycopg2-binary redis pydantic python-dotenv faker langchain
+ 1018  pip install pytest pytest-asyncio pytest-mock sqlalchemy-utils
+ 1019  pip install pytest-cov
+ 1020  pip install firebase-admin
+ 1021  pip install fastapi[all] redis
+ 1022  pip install stripe
+ 1023  pip install paypalhttp
+ 1024  pip install fastapi-mail jinja2
+ 1025  pip install fpdf qrcode[pil] pillow
+ 1026  pip install google-auth google-auth-oauthlib google-api-python-client
+ 1027  pip install pyjwt passlib[bcrypt] python-multipart
+ 1028  pip install sentry-sdk[fastapi]
+ 1029  pip install paypalhttp
+ 1030  pip install apns2
+ 1031  pip install --upgrade pyjwt[crypto]
+ 1032  pip install --upgrade apns2
+ 1033  pip install --upgrade pyjwt[crypto]
+ 1034  pip install firebase-admin==7.0.0
+ 1035  pip install firebase-admin
+ 1036  pip install --upgrade firebase-admin
+ 1037  pip install --upgrade pyjwt[crypto]
+ 1038  pip install wallet
+ 1039  pip install passkit
+ 1040  pip install py-pkpass
+ 1041  clear
+ 1042  pip show fastapi-mail
+ 1043  pip install fastapi-mail --upgrade
+ 1044  clear
+ 1045  pip show fastapi-mail
+ 1046  pip uninstall apns2
+ 1047  pip install apns
+ 1048  pip uninstall apns
+ 1049  pip install pyapns3
+ 1050  celar
+ 1051  clear
+ 1052  pip install aioapns
+ 1053  clear
+ 1054  pip uninstall paypalhttp
+ 1055  pip install paypalrestsdk
+ 1056  deactivate
+ 1057  exit
+ 1058  source /home/beni/LauraWing/.venv/bin/activate
+ 1059  docker ps
+ 1060  clear
+ 1061  docker-compose up -d
+ 1062  clear
+ 1063  psql -U postgres -d laurawing
+ 1064  psql -U postgres
+ 1065  clear
+ 1066  psql -U postgres
+ 1067  clear
+ 1068  psql -U postgres
+ 1069  clear
+ 1070  psql -U postgres
+ 1071  cd ./backend/routers/
+ 1072  touch __init.py__
+ 1073  cd ..
+ 1074  uvicorn main:app --reload
+ 1075  celar
+ 1076  clear
+ 1077  uvicorn main:app --reload
+ 1078  pkill uvicorn
+ 1079  clear
+ 1080  uvicorn main:app --reload
+ 1081  pkill uvicorn
+ 1082  uvicorn main:app --reload
+ 1083  pkill uvicorn
+ 1084  clear
+ 1085  uvicorn main:app --reload
+ 1086  pkill uvicorn
+ 1087  clear
+ 1088  uvicorn main:app --reload
+ 1089  clear
+ 1090  uvicorn main:app --reload
+ 1091  clear
+ 1092  uvicorn main:app --reload
+ 1093  celar
+ 1094  clear
+ 1095  uvicorn main:app --reload
+ 1096  pkill uvicorn
+ 1097  clear
+ 1098  uvicorn main:app --reload
+ 1099  clear
+ 1100  uvicorn main:app --reload
+ 1101  clear
+ 1102  uvicorn main:app --reload
+ 1103  clear
+ 1104  uvicorn main:app --reload
+ 1105  clear
+ 1106  uvicorn main:app --reload
+ 1107  deactivate
+ 1108  exit
+ 1109  source /home/beni/LauraWing/.venv/bin/activate
+ 1110  cd ..
+ 1111  cd ./backend/
+ 1112  cd ./tests/
+ 1113  ls
+ 1114  python ./test_tts_model.py
+ 1115  curl -X POST http://localhost:8000/tts/synthesize -H "Content-Type: application/json" -d '{"text": "Hello world"}' --output test.wav
+ 1116  source /home/beni/LauraWing/.venv/bin/activate
+ 1117  git init
+ 1118  echo "# Shiny Jar Business CRM + Expense Tracker" > README.md
+ 1119  echo "__pycache__/" > .gitignore
+ 1120  echo "*.pyc" >> .gitignore
+ 1121  echo ".env" >> .gitignore
+ 1122  echo "venv/" >> .gitignore
+ 1123  python3.12 -m venv venv
+ 1124  source venv/bin/activate
+ 1125  mkdir -p backend/{app/{api,models,crud,schemas,core},alembic}
+ 1126  mkdir -p frontend/{pages,components,assets}
+ 1127  mkdir -p docs tests scripts
+ 1128  pip install --upgrade pip
+ 1129  pip show
+ 1130  pip --version
+ 1131  pip install -r ./requirements.txt
+ 1132  pip list
+ 1133  pip show zipp
+ 1134  pip show numpy
+ 1135  clear
+ 1136  ps aux | grep postgres
+ 1137  ps aux | grep redis
+ 1138  clear
+ 1139  docker run --name shinyjar-db -p 5435:5432 -e POSTGRES_PASSWORD=Boku2003 -d postgres:15",
+ 1140          "Starting PostgreSQL container"
+ 1141  docker run --name shinyjar-db -p 5435:5432 -e POSTGRES_PASSWORD=Boku2003 -d postgres:15"
+ 1142  help
+ 1143  ?
+ 1144  python scripts/setup_dev.py
+ 1145  python scripts/setup_docker.py
+ 1146  docker ps
+ 1147  clear
+ 1148  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1149  cd ./frontend/
+ 1150  clear
+ 1151  deactivate
+ 1152  exit
+ 1153  source ./venv/bin/activate
+ 1154  python --version
+ 1155  pip list
+ 1156  clear
+ 1157  cd ./backend/
+ 1158  clear
+ 1159  python -m app.main
+ 1160  deactivate
+ 1161  exit
+ 1162  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1163  cd ./backend/
+ 1164  python -m app.main
+ 1165  celar
+ 1166  clear
+ 1167  cd ..
+ 1168  clear
+ 1169  docker-compose down
+ 1170  docker ps
+ 1171  docker-compose down
+ 1172  docker rm -f 75c88d777725
+ 1173  docker ps
+ 1174  clear
+ 1175  # Initialize git repository
+ 1176  echo "# Shiny Jar Business CRM + Expense Tracker" > README.md
+ 1177  cat > README.md << 'EOF'
+ 1178  # 💎 Shiny Jar Business Suite
+ 1179  A comprehensive CRM and expense tracking system built for jewelry businesses, specifically designed for Shiny Jar Instagram business.
+ 1180  ## ✨ Features
+ 1181  - **Expense Tracking**: Full CRUD operations with categorization
+ 1182  - **Customer CRM**: Instagram integration, order history, communication logs
+ 1183  - **Analytics Dashboard**: Interactive charts and reports
+ 1184  - **Inventory Management**: Track jewelry stock and suppliers
+ 1185  - **Multi-user Support**: Role-based access control
+ 1186  ## 🛠️ Tech Stack
+ 1187  - **Backend**: FastAPI, SQLAlchemy, PostgreSQL
+ 1188  - **Frontend**: Streamlit, Plotly, Pandas
+ 1189  - **Authentication**: JWT Tokens
+ 1190  - **Database**: PostgreSQL
+ 1191  ## 🚀 Quick Start
+ 1192  1. Clone the repository
+ 1193  2. Run `python scripts/setup_dev.py`
+ 1194  3. Start backend: `cd backend && python -m app.main`
+ 1195  4. Start frontend: `cd frontend && streamlit run app.py`
+ 1196  ## 📸 Screenshots
+ 1197  *(Coming soon)*
+ 1198  ## 📄 License
+ 1199  MIT License
+ 1200  EOF
+ 1201  # Create .gitignore
+ 1202  cat > .gitignore << 'EOF'
+ 1203  # Python
+ 1204  __pycache__/
+ 1205  *.py[cod]
+ 1206  *$py.class
+ 1207  *.so
+ 1208  .Python
+ 1209  venv/
+ 1210  env/
+ 1211  # Database
+ 1212  *.db
+ 1213  *.sqlite3
+ 1214  # Environment
+ 1215  .env
+ 1216  .env.local
+ 1217  # IDE
+ 1218  .vscode/
+ 1219  .idea/
+ 1220  # OS
+ 1221  .DS_Store
+ 1222  Thumbs.db
+ 1223  # Logs
+ 1224  *.log
+ 1225  EOF
+ 1226  # First commit
+ 1227  git add .
+ 1228  git commit -m "Initial commit: Shiny Jar Business Suite foundation"
+ 1229  clear
+ 1230  ./setup.sh
+ 1231  chmod +x setup.sh
+ 1232  ./setup.sh
+ 1233  docker-compose build
+ 1234  docker ps
+ 1235  docker-compose up -d
+ 1236  docker ps
+ 1237  clear
+ 1238  cd ./backend/
+ 1239  python -m app.main
+ 1240  deactivate
+ 1241  exit
+ 1242  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1243  # Access PostgreSQL inside Docker
+ 1244  cd ~/shiny_jar_suite
+ 1245  docker-compose exec postgres psql -U shinyjar -d shinyjar_db
+ 1246  clear
+ 1247  docker-compose exec postgres psql -U shinyjar -d shinyjar_db
+ 1248  ./start.sh
+ 1249  docker cp backend/scripts/init.sql shinyjar-db:/tmp/init.sql
+ 1250  docker-compose exec postgres psql -U shinyjar -d shinyjar_db -f /tmp/init.sql
+ 1251  docker-compose exec postgres psql -U shinyjar -d shinyjar_db
+ 1252  docker-compose up
+ 1253  ./start.sh
+ 1254  docker-compose exec postgres psql -U shinyjar -d shinyjar_db
+ 1255  cd ~/shiny_jar_suite
+ 1256  ./stop_all.sh
+ 1257  ./start_all.sh
+ 1258  docker-compose exec postgres psql -U shinyjar -d shinyjar_db
+ 1259  docker ps
+ 1260  clear
+ 1261  deactivate
+ 1262  exit
+ 1263  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1264  cd ~/shiny_jar_suite/frontend
+ 1265  source venv/bin/activate
+ 1266  streamlit run app.py --server.port=8501
+ 1267  cd ..
+ 1268  chmod +x start_dev.sh
+ 1269  cd ./frontend/
+ 1270  # Kill process on port 8000
+ 1271  sudo lsof -ti:8000 | xargs kill -9
+ 1272  # Kill process on port 8501  
+ 1273  sudo lsof -ti:8501 | xargs kill -9
+ 1274  # Kill process on port 8501  
+ 1275  sudo lsof -ti:8501 | xargs kill -9
+ 1276  sudo lsof -ti:8501
+ 1277  sudo lsof -ti:8000
+ 1278  celar
+ 1279  clear
+ 1280  history | grep lsof
+ 1281  sudo lsof -i :8501
+ 1282  docker ps
+ 1283  cd ~/shiny_jar_suite
+ 1284  chmod +x start_all.sh stop_all.sh db_cli.sh status.sh reset_db.sh
+ 1285  celar
+ 1286  clear
+ 1287  cd ./frontend/
+ 1288  deactivate
+ 1289  exit
+ 1290  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1291  cd ./backend/
+ 1292  python -m app.main
+ 1293  cd ..
+ 1294  pip install -r ./requirements.txt
+ 1295  ./setup.sh
+ 1296  cd ./backend/
+ 1297  pip install -e .
+ 1298  python -m app.main
+ 1299  cd ./app/
+ 1300  python main.py
+ 1301  cd ..
+ 1302  clear
+ 1303  docker ps
+ 1304  docker-compose up -d
+ 1305  docker ps
+ 1306  python -m ./backend/app/main.py
+ 1307  python -m backend.app.main
+ 1308  ./run_backend.sh
+ 1309  chmod +x ./run_backend.sh
+ 1310  ./run_backend.sh
+ 1311  # From project root
+ 1312  docker-compose up backend
+ 1313  clear
+ 1314  python run.py
+ 1315  clear
+ 1316  chmod +x run.py
+ 1317  ./run.py backend
+ 1318  docker-compose up backend
+ 1319  celar
+ 1320  clera
+ 1321  clear
+ 1322  # From your project root directory
+ 1323  docker-compose up --build
+ 1324  clear
+ 1325  chmod +x run.sh
+ 1326  ./run.sh
+ 1327  cd ./backend/
+ 1328  python -m app.main
+ 1329  ps aux | grep 5433
+ 1330  ps aux | grep 5432
+ 1331  ps aux | grep 5435
+ 1332  ps aux | grep 5434
+ 1333  docker ps
+ 1334  cd ..
+ 1335  clear
+ 1336  ./run.sh
+ 1337  python run.py all
+ 1338  python ./simple_start.py
+ 1339  docker ps
+ 1340  clear
+ 1341  ./run.sh
+ 1342  cd ./backend/
+ 1343  python -m app:main
+ 1344  python -m main:app
+ 1345  ls
+ 1346  python -m api.main
+ 1347  history | grep main
+ 1348  cd ..
+ 1349  ./run_backend.sh
+ 1350  cd ./backend/
+ 1351  python -m app.main
+ 1352  cd ..
+ 1353  ./diagnose.sh
+ 1354  chmod +x ./diagnose.sh
+ 1355  ./diagnose.sh
+ 1356  clear
+ 1357  ./diagnose.sh
+ 1358  chmod +x ./start_local.sh
+ 1359  clear
+ 1360  sudo lsof -i :5436
+ 1361  ./run.sh
+ 1362  docker-compose up
+ 1363  docker-compose up -d postgres
+ 1364  cd ./backend/
+ 1365  python -m app.main
+ 1366  export DATABASE_URL="postgresql://shinyjar:shinyjar123@localhost:5436/shinyjar_db"
+ 1367  python -m app.main
+ 1368  cd ..
+ 1369  docker-compose up
+ 1370  psql -U postgres
+ 1371  clear
+ 1372  docker ps
+ 1373  docker-compose up
+ 1374  docker ps
+ 1375  ./run.sh
+ 1376  docker ps
+ 1377  clear
+ 1378  history | grep docker
+ 1379  docker-compose up -d
+ 1380  docker run --name shinyjar-db -p 5436:5432 -e POSTGRES_PASSWORD=Boku2003 -d postgres:15"
+ 1381  history | grep docker
+ 1382  clear
+ 1383  docker-compose down
+ 1384  docker-compose up
+ 1385  clear
+ 1386  psql -U postgres
+ 1387  clear
+ 1388  # Go to project root
+ 1389  cd ~/shiny_jar_suite
+ 1390  # Stop and remove everything
+ 1391  docker-compose down -v
+ 1392  docker system prune -f
+ 1393  # Remove old containers/images
+ 1394  docker rm -f $(docker ps -aq) 2>/dev/null
+ 1395  docker rmi -f $(docker images -q) 2>/dev/null
+ 1396  chmod +x clean_start.sh
+ 1397  docker ps
+ 1398  ./clean_start.sh
+ 1399  chmod +x ./test_docker.sh
+ 1400  ./test_docker.sh
+ 1401  ./clean_start.sh
+ 1402  clear
+ 1403  ./clean_start.sh
+ 1404  # Check if all services are up
+ 1405  docker-compose ps
+ 1406  # Check backend logs
+ 1407  docker-compose logs backend
+ 1408  # Test API
+ 1409  curl http://localhost:8000/
+ 1410  # Check database
+ 1411  sudo lsof -i :5433
+ 1412  clear
+ 1413  chmod +x go.sh
+ 1414  ./go.sh
+ 1415  clear
+ 1416  docker-compose up --build
+ 1417  cd ~/shiny_jar_suite
+ 1418  echo "📁 Current structure:"
+ 1419  ls -la backend/ frontend/
+ 1420  cat > backend/requirements.txt << 'EOF'
+ 1421  fastapi==0.104.1
+ 1422  uvicorn[standard]==0.24.0
+ 1423  sqlalchemy==2.0.23
+ 1424  alembic==1.12.1
+ 1425  psycopg2-binary==2.9.9
+ 1426  python-jose[cryptography]==3.3.0
+ 1427  passlib[bcrypt]==1.7.4
+ 1428  python-multipart==0.0.6
+ 1429  python-dotenv==1.0.0
+ 1430  pydantic==2.5.0
+ 1431  pydantic-settings==2.1.0
+ 1432  requests==2.31.0
+ 1433  python-dateutil==2.8.2
+ 1434  EOF
+ 1435  cat > frontend/requirements.txt << 'EOF'
+ 1436  streamlit==1.28.1
+ 1437  plotly==5.18.0
+ 1438  pandas==2.1.3
+ 1439  numpy==1.26.2
+ 1440  requests==2.31.0
+ 1441  python-dateutil==2.8.2
+ 1442  EOF
+ 1443  cd ~/shiny_jar_suite
+ 1444  echo "✅ Backend structure:"
+ 1445  ls -la backend/
+ 1446  echo ""
+ 1447  echo "✅ Frontend structure:"
+ 1448  ls -la frontend/
+ 1449  echo ""
+ 1450  echo "✅ Checking critical files:"
+ 1451  [ -f backend/requirements.txt ] && echo "✓ backend/requirements.txt exists" || echo "✗ backend/requirements.txt missing"
+ 1452  [ -f frontend/requirements.txt ] && echo "✓ frontend/requirements.txt exists" || echo "✗ frontend/requirements.txt missing"
+ 1453  [ -f backend/Dockerfile ] && echo "✓ backend/Dockerfile exists" || echo "✗ backend/Dockerfile missing"
+ 1454  [ -f frontend/Dockerfile ] && echo "✓ frontend/Dockerfile exists" || echo "✗ frontend/Dockerfile missing"
+ 1455  cat > fix_it.sh << 'EOF'
+ 1456  #!/bin/bash
+ 1457  echo "🔧 Fixing Shiny Jar Setup..."
+ 1458  # Go to project root
+ 1459  cd ~/shiny_jar_suite
+ 1460  # Create backend requirements if missing
+ 1461  if [ ! -f "backend/requirements.txt" ]; then
+ 1462      echo "📝 Creating backend/requirements.txt..."
+ 1463      cat > backend/requirements.txt << 'BACKEND_REQ'
+ 1464  fastapi==0.104.1
+ 1465  uvicorn[standard]==0.24.0
+ 1466  sqlalchemy==2.0.23
+ 1467  psycopg2-binary==2.9.9
+ 1468  python-jose[cryptography]==3.3.0
+ 1469  passlib[bcrypt]==1.7.4
+ 1470  python-dotenv==1.0.0
+ 1471  pydantic==2.5.0
+ 1472  pydantic-settings==2.1.0
+ 1473  requests==2.31.0
+ 1474  BACKEND_REQ
+ 1475  fi
+ 1476  # Create frontend requirements if missing
+ 1477  if [ ! -f "frontend/requirements.txt" ]; then
+ 1478      echo "📝 Creating frontend/requirements.txt..."
+ 1479      cat > frontend/requirements.txt << 'FRONTEND_REQ'
+ 1480  streamlit==1.28.1
+ 1481  plotly==5.18.0
+ 1482  pandas==2.1.3
+ 1483  numpy==1.26.2
+ 1484  requests==2.31.0
+ 1485  FRONTEND_REQ
+ 1486  fi
+ 1487  # Create backend Dockerfile if missing
+ 1488  if [ ! -f "backend/Dockerfile" ]; then
+ 1489      echo "📝 Creating backend/Dockerfile..."
+ 1490      cat > backend/Dockerfile << 'BACKEND_DOCKERFILE'
+ 1491  FROM python:3.12-slim
+ 1492  WORKDIR /app
+ 1493  RUN apt-get update && apt-get install -y gcc g++ libpq-dev && rm -rf /var/lib/apt/lists/*
+ 1494  COPY requirements.txt .
+ 1495  RUN pip install --no-cache-dir -r requirements.txt
+ 1496  ENV DOCKER_ENV=true
+ 1497  COPY . .
+ 1498  CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+ 1499  BACKEND_DOCKERFILE
+ 1500  fi
+ 1501  # Create frontend Dockerfile if missing
+ 1502  if [ ! -f "frontend/Dockerfile" ]; then
+ 1503      echo "📝 Creating frontend/Dockerfile..."
+ 1504      cat > frontend/Dockerfile << 'FRONTEND_DOCKERFILE'
+ 1505  FROM python:3.12-slim
+ 1506  WORKDIR /app
+ 1507  RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+ 1508  COPY requirements.txt .
+ 1509  RUN pip install --no-cache-dir -r requirements.txt
+ 1510  COPY . .
+ 1511  CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ 1512  FRONTEND_DOCKERFILE
+ 1513  fi
+ 1514  echo "✅ Files created!"
+ 1515  echo ""
+ 1516  echo "📁 Verifying structure:"
+ 1517  ls -la backend/requirements.txt backend/Dockerfile frontend/requirements.txt frontend/Dockerfile
+ 1518  echo ""
+ 1519  echo "🚀 Now run: docker-compose up --build"
+ 1520  EOF
+ 1521  chmod +x fix_it.sh
+ 1522  ./fix_it.sh
+ 1523  docker-compose up --build
+ 1524  ./fix_it.sh
+ 1525  cd ~/shiny_jar_suite
+ 1526  docker-compose down  # Clean up
+ 1527  docker-compose build --no-cache  # Fresh build
+ 1528  docker-compose up  # Start everything
+ 1529  ./fix_it.sh
+ 1530  docker-compose up  # Start everything
+ 1531  cd ~/shiny_jar_suite
+ 1532  docker-compose down
+ 1533  docker system prune -f
+ 1534  cd ~/shiny_jar_suite
+ 1535  # 1. Stop everything
+ 1536  docker-compose down 2>/dev/null
+ 1537  # 2. Remove problem packages from requirements
+ 1538  cat > backend/requirements.txt << 'EOF'
+ 1539  fastapi==0.104.1
+ 1540  uvicorn[standard]==0.24.0
+ 1541  sqlalchemy==2.0.23
+ 1542  psycopg2-binary==2.9.9
+ 1543  EOF
+ 1544  cat > frontend/requirements.txt << 'EOF'
+ 1545  streamlit==1.28.1
+ 1546  pandas==2.1.3
+ 1547  EOF
+ 1548  # 3. Create NO-APT Dockerfiles
+ 1549  cat > backend/Dockerfile << 'EOF'
+ 1550  FROM python:3.12-alpine
+ 1551  WORKDIR /app
+ 1552  COPY requirements.txt .
+ 1553  RUN pip install --no-cache-dir -r requirements.txt
+ 1554  COPY . .
+ 1555  CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+ 1556  EOF
+ 1557  cat > frontend/Dockerfile << 'EOF'
+ 1558  FROM python:3.12-alpine
+ 1559  WORKDIR /app
+ 1560  COPY requirements.txt .
+ 1561  RUN pip install --no-cache-dir -r requirements.txt
+ 1562  COPY . .
+ 1563  CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ 1564  EOF
+ 1565  # 4. Build with Alpine (much faster)
+ 1566  docker-compose build
+ 1567  docker-compose up
+ 1568  clear
+ 1569  cd ~/shiny_jar_suite
+ 1570  docker-compose down
+ 1571  docker system prune -f
+ 1572  # Create new Dockerfiles
+ 1573  cat > backend/Dockerfile << 'EOF'
+ 1574  FROM python:3.12-slim
+ 1575  WORKDIR /app
+ 1576  # Skip apt-get if possible, or use minimal install
+ 1577  RUN apt-get update || true
+ 1578  COPY requirements.txt .
+ 1579  RUN pip install --no-cache-dir -r requirements.txt
+ 1580  COPY . .
+ 1581  EXPOSE 8000
+ 1582  CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+ 1583  EOF
+ 1584  cat > frontend/Dockerfile << 'EOF'
+ 1585  FROM python:3.12-slim
+ 1586  WORKDIR /app
+ 1587  # Skip apt-get completely
+ 1588  COPY requirements.txt .
+ 1589  RUN pip install --no-cache-dir -r requirements.txt
+ 1590  COPY . .
+ 1591  EXPOSE 8501
+ 1592  CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ 1593  EOF
+ 1594  # Simplify requirements
+ 1595  cat > backend/requirements.txt << 'EOF'
+ 1596  fastapi==0.104.1
+ 1597  uvicorn[standard]==0.24.0
+ 1598  sqlalchemy==2.0.23
+ 1599  psycopg2-binary==2.9.9
+ 1600  python-dotenv==1.0.0
+ 1601  EOF
+ 1602  cat > frontend/requirements.txt << 'EOF'
+ 1603  streamlit==1.28.1
+ 1604  pandas==2.1.3
+ 1605  requests==2.31.0
+ 1606  EOF
+ 1607  # Build with timeout
+ 1608  timeout 300 docker-compose build || echo "Build timed out, trying without apt-get..."
+ 1609  # If that fails, use this super simple build
+ 1610  cat > docker-compose-simple.yml << 'EOF'
+ 1611  version: '3.8'
+ 1612  services:
+ 1613    postgres:
+ 1614      image: postgres:15-alpine
+ 1615      environment:
+ 1616        POSTGRES_USER: shinyjar
+ 1617        POSTGRES_PASSWORD: shinyjar123
+ 1618        POSTGRES_DB: shinyjar_db
+ 1619      ports:
+ 1620        - "5433:5432"
+ 1621      volumes:
+ 1622        - postgres_data:/var/lib/postgresql/data
+ 1623    backend:
+ 1624      image: python:3.12
+ 1625      working_dir: /app
+ 1626      ports:
+ 1627        - "8000:8000"
+ 1628      volumes:
+ 1629        - ./backend:/app
+ 1630      command: >
+ 1631        sh -c "pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv &&
+ 1632               uvicorn app.main:app --host 0.0.0.0 --port 8000"
+ 1633      depends_on:
+ 1634        - postgres
+ 1635    frontend:
+ 1636      image: python:3.12
+ 1637      working_dir: /app
+ 1638      ports:
+ 1639        - "8501:8501"
+ 1640      volumes:
+ 1641        - ./frontend:/app
+ 1642      command: >
+ 1643        sh -c "pip install streamlit pandas &&
+ 1644               streamlit run app.py --server.port=8501 --server.address=0.0.0.0"
+ 1645      depends_on:
+ 1646        - backend
+ 1647  volumes:
+ 1648    postgres_data:
+ 1649  EOF
+ 1650  # Try the simple version
+ 1651  docker-compose -f docker-compose-simple.yml up
+ 1652  cat > backend/requirements.txt << 'EOF'
+ 1653  fastapi==0.104.1
+ 1654  uvicorn[standard]==0.24.0
+ 1655  sqlalchemy==2.0.23
+ 1656  psycopg2-binary==2.9.9
+ 1657  python-jose[cryptography]==3.3.0
+ 1658  passlib[bcrypt]==1.7.4
+ 1659  python-dotenv==1.0.0
+ 1660  pydantic==2.5.0
+ 1661  pydantic-settings==2.1.0
+ 1662  python-multipart==0.0.6
+ 1663  EOF
+ 1664  cat > frontend/requirements.txt << 'EOF'
+ 1665  streamlit==1.28.1
+ 1666  plotly==5.18.0
+ 1667  pandas==2.1.3
+ 1668  numpy==1.26.2
+ 1669  requests==2.31.0
+ 1670  EOF
+ 1671  cd ~/shiny_jar_suite
+ 1672  # 1. Update requirements files (as above)
+ 1673  # 2. Just restart the containers (they'll pick up new requirements)
+ 1674  docker-compose restart backend frontend
+ 1675  # 3. Or rebuild just those services
+ 1676  docker-compose up -d --build backend frontend
+ 1677  clear
+ 1678  cd ~/shiny_jar_suite
+ 1679  # Clean up old Docker stuff
+ 1680  docker-compose down -v
+ 1681  rm -f docker-compose.yml Dockerfile*
+ 1682  # Keep only what we need
+ 1683  find . -name "Dockerfile*" -delete
+ 1684  cd ~/shiny_jar_suite
+ 1685  chmod +x start.sh stop.sh
+ 1686  clear
+ 1687  docker ps
+ 1688  clear
+ 1689  ./start.sh
+ 1690  clear
+ 1691  cd ~/shiny_jar_suite
+ 1692  # 1. Start ONLY PostgreSQL in Docker
+ 1693  docker-compose up -d postgres
+ 1694  # 2. Wait for DB to start
+ 1695  sleep 3
+ 1696  # 3. Check if DB is running
+ 1697  docker-compose ps
+ 1698  # 4. Start backend
+ 1699  cd backend
+ 1700  source venv/bin/activate
+ 1701  python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1702  cd ~/shiny_jar_suite
+ 1703  docker-compose up postgres
+ 1704  clear
+ 1705  cd ~/shiny_jar_suite
+ 1706  docker-compose down
+ 1707  cd ~/shiny_jar_suite
+ 1708  # 1. Check where init.sql actually is
+ 1709  find . -name "init.sql" -type f
+ 1710  # 2. If it's not in backend/scripts, move it there
+ 1711  mkdir -p backend/scripts
+ 1712  cp init.sql backend/scripts/ 2>/dev/null || echo "File not found in root"
+ 1713  # 3. OR create it fresh
+ 1714  cat > backend/scripts/init.sql << 'EOF'
+ 1715  -- Shiny Jar Database Initialization
+ 1716  CREATE TABLE IF NOT EXISTS businesses (
+ 1717      id SERIAL PRIMARY KEY,
+ 1718      name VARCHAR(100) NOT NULL,
+ 1719      instagram_handle VARCHAR(50),
+ 1720      currency VARCHAR(3) DEFAULT 'EUR',
+ 1721      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ 1722  );
+ 1723  CREATE TABLE IF NOT EXISTS users (
+ 1724      id SERIAL PRIMARY KEY,
+ 1725      username VARCHAR(50) UNIQUE NOT NULL,
+ 1726      email VARCHAR(100) UNIQUE NOT NULL,
+ 1727      full_name VARCHAR(100),
+ 1728      hashed_password VARCHAR(255) NOT NULL,
+ 1729      is_active BOOLEAN DEFAULT true,
+ 1730      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ 1731      business_id INTEGER REFERENCES businesses(id)
+ 1732  );
+ 1733  CREATE TABLE IF NOT EXISTS transactions (
+ 1734      id SERIAL PRIMARY KEY,
+ 1735      amount DECIMAL(10, 2) NOT NULL,
+ 1736      type VARCHAR(10) CHECK (type IN ('expense', 'income')),
+ 1737      category VARCHAR(50),
+ 1738      description TEXT,
+ 1739      date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ 1740      business_id INTEGER REFERENCES businesses(id),
+ 1741      user_id INTEGER REFERENCES users(id)
+ 1742  );
+ 1743  CREATE TABLE IF NOT EXISTS customers (
+ 1744      id SERIAL PRIMARY KEY,
+ 1745      name VARCHAR(100) NOT NULL,
+ 1746      instagram_handle VARCHAR(50),
+ 1747      email VARCHAR(100),
+ 1748      phone VARCHAR(20),
+ 1749      first_order_date DATE,
+ 1750      total_spent DECIMAL(10, 2) DEFAULT 0.00,
+ 1751      notes TEXT,
+ 1752      business_id INTEGER REFERENCES businesses(id),
+ 1753      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ 1754  );
+ 1755  -- Insert sample business
+ 1756  INSERT INTO businesses (name, instagram_handle, currency) 
+ 1757  VALUES ('Shiny Jar', 'shiny_jar', 'EUR')
+ 1758  ON CONFLICT (name) DO NOTHING;
+ 1759  -- Insert admin user (password: admin123)
+ 1760  INSERT INTO users (username, email, full_name, hashed_password, business_id) 
+ 1761  VALUES (
+ 1762      'admin', 
+ 1763      'admin@shinyjar.com', 
+ 1764      'Admin User', 
+ 1765      '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW',
+ 1766      (SELECT id FROM businesses WHERE name = 'Shiny Jar')
+ 1767  ) ON CONFLICT (username) DO NOTHING;
+ 1768  -- Sample transactions
+ 1769  INSERT INTO transactions (amount, type, category, description, business_id, user_id) VALUES
+ 1770  (150.00, 'expense', 'Materials', 'Silver chains', 1, 1),
+ 1771  (45.00, 'expense', 'Packaging', 'Jewelry boxes', 1, 1),
+ 1772  (89.00, 'income', 'Sales', 'Necklace sale', 1, 1),
+ 1773  (120.00, 'income', 'Sales', 'Earrings sale', 1, 1)
+ 1774  ON CONFLICT DO NOTHING;
+ 1775  -- Sample customers
+ 1776  INSERT INTO customers (name, instagram_handle, email, total_spent, business_id) VALUES
+ 1777  ('Maria Silva', 'maria_silva', 'maria@email.com', 250.00, 1),
+ 1778  ('John Doe', 'john_jewelry', 'john@email.com', 180.00, 1),
+ 1779  ('Anna Smith', 'anna_sparkle', 'anna@email.com', 320.00, 1)
+ 1780  ON CONFLICT DO NOTHING;
+ 1781  EOF
+ 1782  # 4. Verify file exists
+ 1783  ls -la backend/scripts/init.sql
+ 1784  cd ~/shiny_jar_suite
+ 1785  # 1. Stop everything
+ 1786  docker-compose down -v
+ 1787  # 2. Make sure init.sql exists in the right place
+ 1788  mkdir -p backend/scripts
+ 1789  if [ ! -f "backend/scripts/init.sql" ]; then     echo "📝 Creating init.sql..."
+ 1790      cat > backend/scripts/init.sql << 'INITSQL'-- Shiny Jar Database Initialization
+ 1791  CREATE TABLE IF NOT EXISTS transactions (
+ 1792      id SERIAL PRIMARY KEY,
+ 1793      amount DECIMAL(10, 2) NOT NULL,
+ 1794      type VARCHAR(10) CHECK (type IN ('expense', 'income')),
+ 1795      category VARCHAR(50),
+ 1796      description TEXT,
+ 1797      date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ 1798  );
+ 1799  CREATE TABLE IF NOT EXISTS customers (
+ 1800      id SERIAL PRIMARY KEY,
+ 1801      name VARCHAR(100) NOT NULL,
+ 1802      instagram_handle VARCHAR(50),
+ 1803      email VARCHAR(100),
+ 1804      total_spent DECIMAL(10, 2) DEFAULT 0.00
+ 1805  );
+ 1806  -- Sample data
+ 1807  INSERT INTO transactions (amount, type, category, description) VALUES
+ 1808  (150.00, 'expense', 'Materials', 'Silver chains'),
+ 1809  (89.00, 'income', 'Sales', 'Necklace sale')
+ 1810  ON CONFLICT DO NOTHING;
+ 1811  INSERT INTO customers (name, instagram_handle, email, total_spent) VALUES
+ 1812  ('Maria Silva', 'maria_silva', 'maria@email.com', 250.00)
+ 1813  ON CONFLICT DO NOTHING;
+ 1814  INITSQL
+ 1815   fi
+ 1816  # 3. Check docker-compose.yml path
+ 1817  echo "🔍 Checking docker-compose.yml volume mount..."
+ 1818  grep -A2 "volumes:" docker-compose.yml
+ 1819  # 4. Start fresh
+ 1820  docker-compose up -d postgres
+ 1821  # 5. Wait and check
+ 1822  sleep 5
+ 1823  echo "📊 Checking database..."
+ 1824  docker-compose exec postgres psql -U shinyjar -d shinyjar_db -c "\dt"
+ 1825  cd ~/shiny_jar_suite
+ 1826  # 1. Stop everything
+ 1827  docker-compose down -v
+ 1828  # 2. Make sure init.sql exists in the right place
+ 1829  mkdir -p backend/scripts
+ 1830  if [ ! -f "backend/scripts/init.sql" ]; then     echo "📝 Creating init.sql..."
+ 1831      cat > backend/scripts/init.sql << 'INITSQL'-- Shiny Jar Database Initialization
+ 1832  CREATE TABLE IF NOT EXISTS transactions (
+ 1833      id SERIAL PRIMARY KEY,
+ 1834      amount DECIMAL(10, 2) NOT NULL,
+ 1835      type VARCHAR(10) CHECK (type IN ('expense', 'income')),
+ 1836      category VARCHAR(50),
+ 1837      description TEXT,
+ 1838      date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ 1839  );
+ 1840  CREATE TABLE IF NOT EXISTS customers (
+ 1841      id SERIAL PRIMARY KEY,
+ 1842      name VARCHAR(100) NOT NULL,
+ 1843      instagram_handle VARCHAR(50),
+ 1844      email VARCHAR(100),
+ 1845      total_spent DECIMAL(10, 2) DEFAULT 0.00
+ 1846  );
+ 1847  -- Sample data
+ 1848  INSERT INTO transactions (amount, type, category, description) VALUES
+ 1849  (150.00, 'expense', 'Materials', 'Silver chains'),
+ 1850  (89.00, 'income', 'Sales', 'Necklace sale')
+ 1851  ON CONFLICT DO NOTHING;
+ 1852  INSERT INTO customers (name, instagram_handle, email, total_spent) VALUES
+ 1853  ('Maria Silva', 'maria_silva', 'maria@email.com', 250.00)
+ 1854  ON CONFLICT DO NOTHING;
+ 1855  INITSQL
+ 1856   fi
+ 1857  # 3. Check docker-compose.yml path
+ 1858  echo "🔍 Checking docker-compose.yml volume mount..."
+ 1859  grep -A2 "volumes:" docker-compose.yml
+ 1860  # 4. Start fresh
+ 1861  docker-compose up -d postgres
+ 1862  # 5. Wait and check
+ 1863  sleep 5
+ 1864  echo "📊 Checking database..."
+ 1865  docker-compose exec postgres psql -U shinyjar -d shinyjar_db -c "\dt"
+ 1866  docker cp backend/scripts/init.sql shinyjar-db:/tmp/init.sql
+ 1867  docker-compose exec postgres psql -U shinyjar -d shinyjar_db -f /tmp/init.sql
+ 1868  docker-compose up
+ 1869  clear
+ 1870  cd ~/shiny_jar_suite/backend
+ 1871  source venv/bin/activate
+ 1872  python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1873  celar
+ 1874  cd ~/shiny_jar_suite
+ 1875  docker-compose up postgres
+ 1876  docker ps
+ 1877  clear
+ 1878  cd ~/shiny_jar_suite/backend
+ 1879  source venv/bin/activate
+ 1880  python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1881  cd ~/shiny_jar_suite
+ 1882  python -m backend.app.main
+ 1883  pip install uvicorn
+ 1884  uvicorn backend.app.main:app --reload
+ 1885  clear
+ 1886  uvicorn backend.app.main:app --reload
+ 1887  cd backend/
+ 1888  source venv/bin/activate
+ 1889  uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1890  nohup uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1891  uvicorn ./app/main.py --reload
+ 1892  uvicorn app.main.py --reload
+ 1893  uvicorn app.main --reload
+ 1894  uvicorn app:main --reload
+ 1895  cd ..
+ 1896  uvicorn backend.app.main:app --reload
+ 1897  clear
+ 1898  uvicorn backend.app.main:app --reload
+ 1899  clear
+ 1900  pkill uvicorn
+ 1901  celar
+ 1902  clear
+ 1903  cd ~/shiny_jar_suite
+ 1904  export PYTHONPATH=/home/beni/shiny_jar_suite/backend:$PYTHONPATH
+ 1905  cd backend
+ 1906  source venv/bin/activate
+ 1907  python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1908  cd ~/shiny_jar_suite
+ 1909  find backend -name "__init__.py"
+ 1910  # Should show:
+ 1911  # backend/app/__init__.py
+ 1912  # backend/app/core/__init__.py  
+ 1913  # backend/app/models/__init__.py
+ 1914  celar
+ 1915  clera
+ 1916  clear
+ 1917  find backend -name "__init__.py"
+ 1918  clear
+ 1919  cd ./backend/
+ 1920  deactivate
+ 1921  exit
+ 1922  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1923  ./stop_all.sh
+ 1924  deactivate
+ 1925  exit
+ 1926  cd backend/
+ 1927  chmod +x run.sh
+ 1928  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1929  deactivate
+ 1930  source venv/bin/activate
+ 1931  source /home/beni/shiny_jar_suite/venv/bin/activate
+ 1932  deactivate
+ 1933  cd ..
+ 1934  source ./venv/bin/activate
+ 1935  clear
+ 1936  ./start_all.sh
+ 1937  docker-compose exec postgres psql -U shinyjar -d shinyjar_db -c "\dt"
+ 1938  history > history_29Dec25.txt
