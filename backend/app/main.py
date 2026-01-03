@@ -1228,7 +1228,20 @@ def get_dashboard_stats(db: Session = Depends(get_db), current_user: User = Depe
         ]
     }
 
+#======================================
+# config for local run
+#======================================
+# if __name__ == "__main__":
+#     print(f"🚀 Starting {settings.APP_NAME} on http://localhost:8000")
+#     print(f"📊 Database: {settings.DATABASE_URL}")
+#     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+
+#=====================================
+# config for railway run
+#=====================================
+# Get port from Railway or use 8000 as default
+PORT = int(os.getenv("PORT", 8000))
+
 if __name__ == "__main__":
-    print(f"🚀 Starting {settings.APP_NAME} on http://localhost:8000")
-    print(f"📊 Database: {settings.DATABASE_URL}")
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=PORT, reload=False)
