@@ -1,13 +1,16 @@
 import os
-import logging
-from dotenv import load_dotenv
 
-load_dotenv()
-logger = logging.getLogger(__name__)
 class Settings:
+    # Get DATABASE_URL from environment
     DATABASE_URL = os.getenv("DATABASE_URL")
     
-    # Convert postgres:// to postgresql:// for SQLAlchemy
+    # Debug: Print the DATABASE_URL (for troubleshooting, remove in production)
+    if not DATABASE_URL:
+        print("WARNING: DATABASE_URL is not set!")
+    else:
+        print(f"DATABASE_URL found: {DATABASE_URL[:20]}...")  # Print first 20 chars
+    
+    # Convert postgres:// to postgresql:// for SQLAlchemy (Railway uses postgres://)
     if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
         DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
     
