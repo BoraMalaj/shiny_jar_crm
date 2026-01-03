@@ -90,22 +90,54 @@ class AuthManager:
     #         return self._demo_login(username, password)
     
     ## Login for Railway deployment
-    def login(self, username, password):
+    def login(self, username, password, use_backend=True):  # Add the parameter
+        """Login user with username and password"""
         try:
-            response = requests.post(
-                f"{self.api_url}/token",
-                data={"username": username, "password": password}
-            )
-            
-            if response.status_code == 200:
-                token_data = response.json()
-                self.token = token_data.get("access_token")
-                st.session_state['token'] = self.token  # STORE IN SESSION
-                st.session_state['auth_header'] = {"Authorization": f"Bearer {self.token}"}
+            if use_backend:
+                # Backend authentication
+                response = requests.post(
+                    f"{self.api_url}/token",  # or /api/login depending on your endpoint
+                    data={"username": username, "password": password}
+                )
+                
+                if response.status_code == 200:
+                    token_data = response.json()
+                    access_token = token_data.get("access_token")
+                    
+                    if access_token:
+                        # Store token in session
+                        st.session_state['token'] = access_token
+                        st.session_state['logged_in'] = True
+                        st.session_state['username'] = username
+                        st.session_state['auth_header'] = {
+                            "Authorization": f"Bearer {access_token}"
+                        }
+                        
+                        # Get user info
+                        try:
+                            user_response = requests.get(
+                                f"{self.api_url}/api/users/me",
+                                headers=st.session_state['auth_header']
+                            )
+                            if user_response.status_code == 200:
+                                user_data = user_response.json()
+                                st.session_state['role'] = user_data.get('role', 'user')
+                                st.session_state['user_id'] = user_data.get('id')
+                        except:
+                            pass  # User info optional
+                        
+                        return True
+            else:
+                # Demo mode fallback
+                st.session_state['logged_in'] = True
+                st.session_state['username'] = username
+                st.session_state['role'] = 'demo'
                 return True
+                
             return False
+            
         except Exception as e:
-            st.error(f"Login error: {e}")
+            st.error(f"Login error: {str(e)}")
             return False
     
     def _backend_login(self, username, password):
