@@ -13,7 +13,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 backend_dir = os.path.dirname(os.path.dirname(current_dir))
 sys.path.insert(0, backend_dir)
 
-from fastapi import FastAPI, Depends, HTTPException, Body
+from fastapi import FastAPI, Depends, HTTPException, Body, APIRouter
 from sqlalchemy.orm import Session
 import uvicorn
 from typing import List, Optional, Dict, Any
@@ -24,6 +24,7 @@ from pydantic import BaseModel, Field, validator
 from app.core.database import get_db, engine
 from app.core.config import settings
 from app.models.database import Base, Transaction, Customer, Supplier, Budget, Category, Business, User, Inventory
+from app.api import users   # added for railway authentication issues
 
 # Create tables
 Base.metadata.create_all(bind=engine)
@@ -268,6 +269,8 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc"
 )
+
+app.include_router(users.router, prefix="/api")     # added for railway authentication
 
 @app.get("/")
 def root():

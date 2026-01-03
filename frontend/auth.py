@@ -45,12 +45,15 @@ from pathlib import Path
 class AuthManager:
     def __init__(self, api_url=None):
         # Get BACKEND_API_URL from environment at runtime
-        if api_url:
-            self.api_url = api_url
-        else:
-            # Use environment variable with fallback
-            # self.api_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
-            self.api_url = os.getenv("BACKEND_API_URL", "https://shinyjarcrm-production.up.railway.app")    # force fallback to railway backend
+        # if api_url:
+        #     self.api_url = api_url
+        # else:
+        #     # Use environment variable with fallback
+        #     # self.api_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+        #     self.api_url = os.getenv("BACKEND_API_URL", "https://shinyjarcrm-production.up.railway.app")    # force fallback to railway backend
+        
+        self.api_url = api_url or "https://shinyjarcrm-production.up.railway.app"       # use railway url by default
+        self.token = None
         
         # Debug: Show what URL we're using
         st.sidebar.write(f"🌐 API: {self.api_url[:30]}..." if len(self.api_url) > 30 else f"🌐 API: {self.api_url}")
@@ -78,12 +81,32 @@ class AuthManager:
             if key not in st.session_state:
                 st.session_state[key] = default_value
     
-    def login(self, username, password, use_backend=True):
-        """Authenticate user - tries real API or demo based on choice"""
-        if use_backend:
-            return self._backend_login(username, password)
-        else:
-            return self._demo_login(username, password)
+    ## Login for local deployment
+    # def login(self, username, password, use_backend=True):
+    #     """Authenticate user - tries real API or demo based on choice"""
+    #     if use_backend:
+    #         return self._backend_login(username, password)
+    #     else:
+    #         return self._demo_login(username, password)
+    
+    ## Login for Railway deployment
+    def login(self, username, password):
+        try:
+            response = requests.post(
+                f"{self.api_url}/token",
+                data={"username": username, "password": password}
+            )
+            
+            if response.status_code == 200:
+                token_data = response.json()
+                self.token = token_data.get("access_token")
+                st.session_state['token'] = self.token  # STORE IN SESSION
+                st.session_state['auth_header'] = {"Authorization": f"Bearer {self.token}"}
+                return True
+            return False
+        except Exception as e:
+            st.error(f"Login error: {e}")
+            return False
     
     def _backend_login(self, username, password):
         """Authenticate with FastAPI backend using OAuth2"""
@@ -248,8 +271,45 @@ class AuthManager:
         current_role = self.get_user_role()
         return current_role in required_roles
     
+    def register(self, username, password, email=None, full_name=None, role="user"):
+        """Register a new user"""
+        try:
+            response = requests.post(
+                f"{self.api_url}/api/users/register",
+                json={
+                    "username": username,
+                    "password": password,
+                    "email": email,
+                    "full_name": full_name,
+                    "role": role
+                }
+            )
+            
+            if response.status_code == 200:
+                return True, "Registration successful!"
+            else:
+                error_data = response.json()
+                return False, error_data.get("detail", "Registration failed")
+                
+        except Exception as e:
+            return False, f"Connection error: {str(e)}"
+    
+    ## Local deployment
+    # def get_auth_header(self):
+    #     return st.session_state.get('auth_header', {})
+    
+    ## Added functionality for railway authentication
     def get_auth_header(self):
-        return st.session_state.get('auth_header', {})
+        """Get auth header for API requests"""
+        if 'auth_header' in st.session_state and st.session_state['auth_header']:
+            return st.session_state['auth_header']
+        
+        if 'token' in st.session_state and st.session_state['token']:
+            return {"Authorization": f"Bearer {st.session_state['token']}"}
+        
+        return {}  # Return empty if no token
+
+    
     
     def is_demo_mode(self):
         return st.session_state.get('api_mode', 'demo') == 'demo'

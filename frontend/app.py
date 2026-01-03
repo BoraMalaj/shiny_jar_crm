@@ -2902,6 +2902,38 @@ def main_app():
         
         st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
         
+        ## Added to debug the authentication token for railway        
+        st.sidebar.write("🔐 Debug Info:")
+        st.sidebar.write(f"Token exists: {'token' in st.session_state}")
+        if 'token' in st.session_state:
+            token_preview = st.session_state['token'][:30] + "..." if st.session_state['token'] else "None"
+            st.sidebar.write(f"Token preview: {token_preview}")
+            
+        # Test an authenticated endpoint
+        try:
+            headers = auth.get_auth_header()
+            st.sidebar.write(f"Auth header: {headers}")
+            
+            test_response = requests.get(
+                f"{auth.api_url}/api/dashboard",
+                headers=headers
+            )
+            st.sidebar.write(f"Dashboard test: {test_response.status_code}")
+        except Exception as e:
+            st.sidebar.write(f"Test error: {e}")
+        
+        # Test Authentication Button
+        if st.button("🔍 Test Auth"):
+            headers = auth.get_auth_header()
+            st.write(f"Headers: {headers}")
+            
+            response = requests.get(
+                "https://shinyjarcrm-production.up.railway.app/api/dashboard",
+                headers=headers
+            )
+            st.write(f"Status: {response.status_code}")
+            st.write(f"Response: {response.text[:100]}")
+        
         # Logout button
         if st.button("🚪 Logout", use_container_width=True, key="logout_btn"):
             auth.logout()
