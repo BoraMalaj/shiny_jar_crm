@@ -5,17 +5,54 @@ import time
 import base64
 from pathlib import Path
 
+# # Class AuthManager for local deployment
+# class AuthManager:
+#     # def __init__(self, api_url="http://localhost:8000"):       
+#     #     self.api_url = api_url
+#     #     self._init_session_state()
+    
+#     # Read from environment or use localhost as fallback
+#     BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+    
+#     def __init__(self, api_url=None):  # Make api_url optional
+#         # Use provided api_url, or the class variable, or localhost
+#         self.api_url = api_url if api_url else self.BACKEND_URL
+#         self._init_session_state()
+    
+#     def _init_session_state(self):
+#         """Initialize all session state variables"""
+#         defaults = {
+#             'token': None,
+#             'user': None,
+#             'role': 'guest',
+#             'api_url': self.api_url,
+#             'logged_in': False,
+#             'customer_id': None,
+#             'supplier_id': None,
+#             'user_id': None,
+#             'username': 'Guest',
+#             'api_mode': 'demo',
+#             'auth_header': {},
+#             'login_mode': 'backend'  # Added login mode to session state
+#         }
+        
+#         for key, default_value in defaults.items():
+#             if key not in st.session_state:
+#                 st.session_state[key] = default_value
+
+# Class AuthManager for Railway Streamlit deployment
 class AuthManager:
-    # def __init__(self, api_url="http://localhost:8000"):       
-    #     self.api_url = api_url
-    #     self._init_session_state()
-    
-    # Read from environment or use localhost as fallback
-    BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
-    
-    def __init__(self, api_url=None):  # Make api_url optional
-        # Use provided api_url, or the class variable, or localhost
-        self.api_url = api_url if api_url else self.BACKEND_URL
+    def __init__(self, api_url=None):
+        # Get BACKEND_API_URL from environment at runtime
+        if api_url:
+            self.api_url = api_url
+        else:
+            # Use environment variable with fallback
+            self.api_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+        
+        # Debug: Show what URL we're using
+        st.sidebar.write(f"🌐 API: {self.api_url[:30]}..." if len(self.api_url) > 30 else f"🌐 API: {self.api_url}")
+        
         self._init_session_state()
     
     def _init_session_state(self):
@@ -24,7 +61,7 @@ class AuthManager:
             'token': None,
             'user': None,
             'role': 'guest',
-            'api_url': self.api_url,
+            'api_url': self.api_url,  # Use instance variable
             'logged_in': False,
             'customer_id': None,
             'supplier_id': None,
@@ -32,7 +69,7 @@ class AuthManager:
             'username': 'Guest',
             'api_mode': 'demo',
             'auth_header': {},
-            'login_mode': 'backend'  # Added login mode to session state
+            'login_mode': 'backend'
         }
         
         for key, default_value in defaults.items():
