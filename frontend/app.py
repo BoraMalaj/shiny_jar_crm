@@ -1,4 +1,8 @@
 # frontend/app.py - COMPATIBLE FIXED VERSION
+# These two imports are for railway container deployment
+import os
+import sys
+# The imports below are enough for local deployment
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -6,6 +10,10 @@ import plotly.graph_objects as go
 import requests
 from datetime import datetime, timedelta
 import time
+
+# # Get the directory where this script is located - important for railway deployment
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, script_dir)
 
 # ========== PAGE CONFIG (MUST BE FIRST) ==========
 st.set_page_config(
