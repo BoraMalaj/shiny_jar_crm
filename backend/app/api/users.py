@@ -5,7 +5,7 @@ from passlib.context import CryptContext
 from datetime import datetime
 
 from app.core.database import get_db
-from app.models.user import User
+from app.models.database import User
 from app.schemas.user import UserCreate, UserUpdatePassword, UserResponse
 from app.core.auth import get_current_user, create_access_token
 
