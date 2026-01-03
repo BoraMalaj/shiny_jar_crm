@@ -6,7 +6,9 @@ import base64
 from pathlib import Path
 
 class AuthManager:
-    def __init__(self, api_url="http://localhost:8000"):
+    # def __init__(self, api_url="http://localhost:8000"):
+    BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+    def __init__(self, api_url="BACKEND_URL"):
         self.api_url = api_url
         self._init_session_state()
     
