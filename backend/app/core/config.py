@@ -1,3 +1,9 @@
+import os
+import logging
+from dotenv import load_dotenv
+
+load_dotenv()
+logger = logging.getLogger(__name__)
 class Settings:
     # No fallback 'localhost' here - force it to fail if missing
     DB_HOST = os.getenv("DB_HOST")
