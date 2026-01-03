@@ -6,10 +6,16 @@ import base64
 from pathlib import Path
 
 class AuthManager:
-    # def __init__(self, api_url="http://localhost:8000"):
+    # def __init__(self, api_url="http://localhost:8000"):       
+    #     self.api_url = api_url
+    #     self._init_session_state()
+    
+    # Read from environment or use localhost as fallback
     BACKEND_URL = os.getenv("BACKEND_API_URL", "http://localhost:8000")
-    def __init__(self, api_url="BACKEND_URL"):
-        self.api_url = api_url
+    
+    def __init__(self, api_url=None):  # Make api_url optional
+        # Use provided api_url, or the class variable, or localhost
+        self.api_url = api_url if api_url else self.BACKEND_URL
         self._init_session_state()
     
     def _init_session_state(self):
