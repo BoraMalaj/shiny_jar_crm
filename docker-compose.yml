@@ -6,10 +6,10 @@ services:
     container_name: shinyjar-db
     environment:
       POSTGRES_USER: shinyjar
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_PASSWORD: shinyjar123
       POSTGRES_DB: shinyjar_db
     ports:
-      - "5433:5432"  # Map to 5433 to avoid conflict with local PostgreSQL
+      - "5432:5432"  # Map to 5433 to avoid conflict with local PostgreSQL
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
