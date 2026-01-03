@@ -49,7 +49,8 @@ class AuthManager:
             self.api_url = api_url
         else:
             # Use environment variable with fallback
-            self.api_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+            # self.api_url = os.getenv("BACKEND_API_URL", "http://localhost:8000")
+            self.api_url = os.getenv("BACKEND_API_URL", "https://shinyjarcrm-production.up.railway.app")    # force fallback to railway backend
         
         # Debug: Show what URL we're using
         st.sidebar.write(f"🌐 API: {self.api_url[:30]}..." if len(self.api_url) > 30 else f"🌐 API: {self.api_url}")

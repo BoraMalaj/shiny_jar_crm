@@ -2874,7 +2874,9 @@ def main_app():
     user_role = auth.get_user_role()
     
     if 'api_url' not in st.session_state:
-        st.session_state.api_url = "http://localhost:8000"
+    #     st.session_state.api_url = "http://localhost:8000"                            # local deployment
+
+        st.session_state.api_url = "https://shinyjarcrm-production.up.railway.app"      # railway deployment
     
     # ========== SIDEBAR ==========
     with st.sidebar:
