@@ -1,4 +1,5 @@
 # frontend/auth.py - FIXED VERSION (No st.query_params)
+import os       # added for railway deployment
 import streamlit as st
 import requests
 import time
