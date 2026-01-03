@@ -1,24 +1,17 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 class Settings:
-    # 1. Try to get a single connection string first (Railway provides this automatically)
-    DATABASE_URL = os.getenv("DATABASE_URL")
-    
-    # 2. If DATABASE_URL isn't found, build it from individual pieces
-    if not DATABASE_URL:
-        DB_USER = os.getenv("DB_USER", "postgres")
-        DB_PASSWORD = os.getenv("DB_PASSWORD", "")
-        DB_HOST = os.getenv("DB_HOST", "localhost")
-        DB_PORT = os.getenv("DB_PORT", "5432")
-        DB_NAME = os.getenv("DB_NAME", "postgres")
+    # No fallback 'localhost' here - force it to fail if missing
+    DB_HOST = os.getenv("DB_HOST")
+    DB_PORT = os.getenv("DB_PORT", "5432")
+    DB_USER = os.getenv("DB_USER")
+    DB_PASSWORD = os.getenv("DB_PASSWORD")
+    DB_NAME = os.getenv("DB_NAME")
+
+    # Only build the URL if the required parts exist
+    if all([DB_USER, DB_PASSWORD, DB_HOST, DB_NAME]):
         DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    
-    # Fix for Railway/Heroku 'postgres://' vs 'postgresql://'
-    if DATABASE_URL.startswith("postgres://"):
-        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    else:
+        # Fallback to the single Railway variable if pieces are missing
+        DATABASE_URL = os.getenv("DATABASE_URL")
     
     # App Settings
     APP_NAME = os.getenv("APP_NAME", "Shiny Jar Business Suite")
