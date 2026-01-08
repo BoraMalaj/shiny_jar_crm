@@ -2,7 +2,7 @@
 
 ![Shiny Jar CRM](frontend/assets/logo.png)
 
-A complete CRM system built for a jewelry business, featuring inventory management, customer tracking, supplier management, and financial analytics.
+A complete CRM system built for a jewelry business, featuring inventory management, customer tracking, supplier management, financial analytics and more...
 
 ## 🚀 Features
 
